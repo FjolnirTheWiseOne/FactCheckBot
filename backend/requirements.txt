@@ -1,0 +1,8 @@
+fastapi==0.120.4
+uvicorn==0.23.2
+python-dotenv==1.2.1
+requests==2.32.5
+newspaper3k==0.2.8
+beautifulsoup4==4.14.2
+python-telegram-bot[ext]==20.6
+lxml_html_clean
