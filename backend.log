@@ -254,3 +254,14 @@ INFO:     127.0.0.1:45956 - "POST /check HTTP/1.1" 200 OK
 INFO:     127.0.0.1:51950 - "POST /check HTTP/1.1" 200 OK
 INFO:     127.0.0.1:37920 - "POST /check HTTP/1.1" 200 OK
 INFO:     127.0.0.1:45374 - "POST /check HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/bot.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [625442]
+INFO:     Started server process [632206]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:45764 - "POST /check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33462 - "POST /check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54642 - "POST /check HTTP/1.1" 200 OK

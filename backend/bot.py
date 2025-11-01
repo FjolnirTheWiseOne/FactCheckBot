@@ -8,7 +8,7 @@ from telegram.ext import (
     CommandHandler,
     MessageHandler,
     ContextTypes,
-    
+
     filters
 )
 
@@ -34,10 +34,14 @@ async def check_url(url: str) -> str:
         resp = requests.post(f"{API_URL}/check", json={"url": url})
         resp.raise_for_status()  # Raise exception for non-200 status codes
         data = resp.json()
+        # include short reasons from backend if available
+        reasons = data.get("reasons") or []
+        reasons_line = " | ".join(reasons[:3]) if reasons else "No clear signals"
         return (
             f"📰 Title: {data.get('title')}\n"
             f"🎯 Trust Score: {data.get('trust_score')}%\n"
-            f"✍️ Verdict: {data.get('verdict')}"
+            f"✍️ Verdict: {data.get('verdict')}\n\n"
+            f"Why: {reasons_line}"
         )
     except Exception as e:
         return f"❌ Error checking article: {str(e)}"
